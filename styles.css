@@ -1,0 +1,108 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    height: auto;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 22% 22% 22%;
+}
+
+.sedans,
+.suvs,
+.luxury {
+    padding: 50px 40px;
+}
+
+.sedans {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color:  hsl(31, 77%, 52%);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(179, 100%, 13%);
+}
+
+.title,
+.description {
+    margin-top: 28px;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 700;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.description {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.sedans-btn,
+.suvs-btn,
+.luxury-btn {
+    margin-top: 6.25em;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sedans-btn { color:  hsl(31, 77%, 52%); }
+.suvs-btn { color: hsl(184, 100%, 22%); }
+.luxury-btn { color: hsl(179, 100%, 13%); }
+
+@media screen and (max-width: 375px) {
+    body { 
+        height: auto; 
+        padding: 70px 20px; 
+    }
+
+    main { display: block; }
+
+    .sedans {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .luxury {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+
+    .sedans-btn,
+    .suvs-btn,
+    .luxury-btn { margin-top: 2.25em; }
+}
